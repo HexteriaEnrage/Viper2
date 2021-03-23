@@ -16,3 +16,8 @@ border-radius: 0px;
     right:0;
     left:0;
   }
+  
+/*Border for debugging */
+  .cardtest {
+    border: 1px solid rgba(255, 2, 2, 1);
+  }
