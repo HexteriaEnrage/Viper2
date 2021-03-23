@@ -3,43 +3,650 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="parallax.css">
-    <title>Parallax Scrolling Effect</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Bootstrap Training</title>
+    <style type="text/css">
+		
+      .testparallax{
+        background-image:url(images/Edited\ header.png);
+        background-size: cover;
+        background-attachment: fixed;
+      }
+  
+      .content{
+        background: white;
+        width: 50%;
+        padding: 40px;
+        margin: 100px auto;
+        font-family: calibri;
+        border-radius: 10px;
+      }
+  
+      p{
+        font-size: 25px;
+        color: black;
+      }
+  
+    </style>
   </head>
-
   <body>
-    <section class="hero">
-        <img src="images/Edited header.png" alt="" class="parallax">
-      <div class="text-wrapper">
-      <h1 class="headline">Parallax</h1>
-      <h2 class="sub-headline">Scrolling effect</h2>
+
+    <!-- Nav white -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 glass">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
       </div>
-      </section>
-      <section class="overflow"></section>
-      
-      
+    </nav>
+    <!-- Nav 3 split -->
+    <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center px-5">
+      <a href="/" class="navbar-brand d-flex w-50 mr-auto">Navbar 3</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+          <ul class="navbar-nav w-100 justify-content-center">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="//codeply.com">Codeply</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+              </li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Right</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Right</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Right</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
 
-
-    <h1>Hello, world!</h1>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Navbar Glass -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light glass px-5">
+      <img src="images/orb-small.png" width="50" height="50" alt="">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ">
+          <input class="mr-sm-2 " type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+<section class="hero">
+  <img src="images/Edited header.png" alt="" class="parallax">
+<div class="text-wrapper">
+<h1 class="headline">Parallax</h1>
+<h2 class="sub-headline">Parallax</h2>
+</div>
+<section class="overflow"></section>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Cards -->
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-5 mt-4">
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body class="testparallax">
+
+  <div class="content">
+      
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+       <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+  </div>
+ 
+    <h1 class="mx-5">Hello, world!</h1>
+
+    <p class="mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat erat, cursus et arcu mattis, blandit iaculis lectus. Pellentesque rutrum finibus nisi in eleifend. Integer lectus enim, congue id consectetur sed, dapibus ut elit. Vivamus consectetur nibh quam. Aenean vel leo dignissim, mollis sapien a, consectetur felis. Etiam malesuada rutrum eleifend. Suspendisse urna justo, hendrerit vitae massa et, varius blandit nunc. Integer lobortis tincidunt est, ac mollis mi finibus nec. Vestibulum varius dapibus mauris, ut convallis quam maximus ut. Cras porttitor feugiat venenatis. Nullam mollis fringilla sapien, sit amet commodo ex ornare in.
+
+Vivamus pharetra in enim ut porta. Nam id augue id mi molestie volutpat volutpat eu nisl. Proin molestie erat lectus. Pellentesque rutrum neque vitae arcu aliquet, sit amet lobortis risus sodales. Sed venenatis ac lectus vitae consequat. Aliquam eleifend nibh vel nunc pellentesque, sed luctus massa semper. Proin tempus turpis sed tortor egestas finibus. Fusce luctus, urna ut eleifend rhoncus, felis metus consectetur enim, ut lacinia tortor arcu vel orci.
+
+Maecenas sed sem a est pharetra vestibulum varius eget dolor. Maecenas dignissim dignissim ipsum, sit amet convallis dui malesuada vel. Nunc fringilla quam ut dui porta, ut consectetur magna tincidunt. Aliquam elementum augue vel sagittis venenatis. Sed quis ullamcorper massa. Aliquam volutpat fringilla urna a dignissim. Nam in porttitor arcu. Integer at nisi gravida eros tempor sollicitudin non eget turpis. Etiam eget purus elit.
+
+Vivamus a commodo orci. Suspendisse in volutpat ex. In hac habitasse platea dictumst. Pellentesque et felis posuere, dignissim urna quis, euismod elit. Nunc sapien elit, consectetur consequat consectetur quis, interdum id elit. Phasellus vitae facilisis metus, eu rutrum eros. Aenean vel sollicitudin lectus. Pellentesque a ullamcorper ante. Donec malesuada neque sed nibh varius luctus. Ut pretium in orci quis fermentum. Nunc scelerisque urna venenatis lacus sagittis varius. Fusce maximus hendrerit dui volutpat convallis.
+
+Integer in lacus et lacus aliquam mollis eget eu lorem. Fusce viverra dictum blandit. Etiam lobortis in velit eu cursus. Etiam feugiat, orci at condimentum blandit, mi magna vulputate nisl, eget facilisis arcu justo sit amet diam. Donec imperdiet massa eget cursus fermentum. Nullam ullamcorper justo vel libero facilisis luctus. Donec massa urna, varius ut ante quis, imperdiet lacinia purus. Maecenas dui velit, tincidunt id risus at, sodales molestie justo. Fusce placerat fringilla neque, quis euismod ante egestas a. Nullam finibus augue et venenatis faucibus. Maecenas nisl nisl, laoreet at imperdiet et, bibendum sit amet erat.
+</p>
+<div class="mx-5">
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+</div>
+
+<p class="mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat erat, cursus et arcu mattis, blandit iaculis lectus. Pellentesque rutrum finibus nisi in eleifend. Integer lectus enim, congue id consectetur sed, dapibus ut elit. Vivamus consectetur nibh quam. Aenean vel leo dignissim, mollis sapien a, consectetur felis. Etiam malesuada rutrum eleifend. Suspendisse urna justo, hendrerit vitae massa et, varius blandit nunc. Integer lobortis tincidunt est, ac mollis mi finibus nec. Vestibulum varius dapibus mauris, ut convallis quam maximus ut. Cras porttitor feugiat venenatis. Nullam mollis fringilla sapien, sit amet commodo ex ornare in.
+
+  Vivamus pharetra in enim ut porta. Nam id augue id mi molestie volutpat volutpat eu nisl. Proin molestie erat lectus. Pellentesque rutrum neque vitae arcu aliquet, sit amet lobortis risus sodales. Sed venenatis ac lectus vitae consequat. Aliquam eleifend nibh vel nunc pellentesque, sed luctus massa semper. Proin tempus turpis sed tortor egestas finibus. Fusce luctus, urna ut eleifend rhoncus, felis metus consectetur enim, ut lacinia tortor arcu vel orci.
+  
+  Maecenas sed sem a est pharetra vestibulum varius eget dolor. Maecenas dignissim dignissim ipsum, sit amet convallis dui malesuada vel. Nunc fringilla quam ut dui porta, ut consectetur magna tincidunt. Aliquam elementum augue vel sagittis venenatis. Sed quis ullamcorper massa. Aliquam volutpat fringilla urna a dignissim. Nam in porttitor arcu. Integer at nisi gravida eros tempor sollicitudin non eget turpis. Etiam eget purus elit.
+  
+  Vivamus a commodo orci. Suspendisse in volutpat ex. In hac habitasse platea dictumst. Pellentesque et felis posuere, dignissim urna quis, euismod elit. Nunc sapien elit, consectetur consequat consectetur quis, interdum id elit. Phasellus vitae facilisis metus, eu rutrum eros. Aenean vel sollicitudin lectus. Pellentesque a ullamcorper ante. Donec malesuada neque sed nibh varius luctus. Ut pretium in orci quis fermentum. Nunc scelerisque urna venenatis lacus sagittis varius. Fusce maximus hendrerit dui volutpat convallis.
+  
+  Integer in lacus et lacus aliquam mollis eget eu lorem. Fusce viverra dictum blandit. Etiam lobortis in velit eu cursus. Etiam feugiat, orci at condimentum blandit, mi magna vulputate nisl, eget facilisis arcu justo sit amet diam. Donec imperdiet massa eget cursus fermentum. Nullam ullamcorper justo vel libero facilisis luctus. Donec massa urna, varius ut ante quis, imperdiet lacinia purus. Maecenas dui velit, tincidunt id risus at, sodales molestie justo. Fusce placerat fringilla neque, quis euismod ante egestas a. Nullam finibus augue et venenatis faucibus. Maecenas nisl nisl, laoreet at imperdiet et, bibendum sit amet erat.
+  </p>
+
+  <div class="mx-5">
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+</div>
+
+<p class="mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat erat, cursus et arcu mattis, blandit iaculis lectus. Pellentesque rutrum finibus nisi in eleifend. Integer lectus enim, congue id consectetur sed, dapibus ut elit. Vivamus consectetur nibh quam. Aenean vel leo dignissim, mollis sapien a, consectetur felis. Etiam malesuada rutrum eleifend. Suspendisse urna justo, hendrerit vitae massa et, varius blandit nunc. Integer lobortis tincidunt est, ac mollis mi finibus nec. Vestibulum varius dapibus mauris, ut convallis quam maximus ut. Cras porttitor feugiat venenatis. Nullam mollis fringilla sapien, sit amet commodo ex ornare in.
+
+  Vivamus pharetra in enim ut porta. Nam id augue id mi molestie volutpat volutpat eu nisl. Proin molestie erat lectus. Pellentesque rutrum neque vitae arcu aliquet, sit amet lobortis risus sodales. Sed venenatis ac lectus vitae consequat. Aliquam eleifend nibh vel nunc pellentesque, sed luctus massa semper. Proin tempus turpis sed tortor egestas finibus. Fusce luctus, urna ut eleifend rhoncus, felis metus consectetur enim, ut lacinia tortor arcu vel orci.
+  
+  Maecenas sed sem a est pharetra vestibulum varius eget dolor. Maecenas dignissim dignissim ipsum, sit amet convallis dui malesuada vel. Nunc fringilla quam ut dui porta, ut consectetur magna tincidunt. Aliquam elementum augue vel sagittis venenatis. Sed quis ullamcorper massa. Aliquam volutpat fringilla urna a dignissim. Nam in porttitor arcu. Integer at nisi gravida eros tempor sollicitudin non eget turpis. Etiam eget purus elit.
+  
+  Vivamus a commodo orci. Suspendisse in volutpat ex. In hac habitasse platea dictumst. Pellentesque et felis posuere, dignissim urna quis, euismod elit. Nunc sapien elit, consectetur consequat consectetur quis, interdum id elit. Phasellus vitae facilisis metus, eu rutrum eros. Aenean vel sollicitudin lectus. Pellentesque a ullamcorper ante. Donec malesuada neque sed nibh varius luctus. Ut pretium in orci quis fermentum. Nunc scelerisque urna venenatis lacus sagittis varius. Fusce maximus hendrerit dui volutpat convallis.
+  
+  Integer in lacus et lacus aliquam mollis eget eu lorem. Fusce viverra dictum blandit. Etiam lobortis in velit eu cursus. Etiam feugiat, orci at condimentum blandit, mi magna vulputate nisl, eget facilisis arcu justo sit amet diam. Donec imperdiet massa eget cursus fermentum. Nullam ullamcorper justo vel libero facilisis luctus. Donec massa urna, varius ut ante quis, imperdiet lacinia purus. Maecenas dui velit, tincidunt id risus at, sodales molestie justo. Fusce placerat fringilla neque, quis euismod ante egestas a. Nullam finibus augue et venenatis faucibus. Maecenas nisl nisl, laoreet at imperdiet et, bibendum sit amet erat.
+  </p>
+
+  <p class="mx-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat erat, cursus et arcu mattis, blandit iaculis lectus. Pellentesque rutrum finibus nisi in eleifend. Integer lectus enim, congue id consectetur sed, dapibus ut elit. Vivamus consectetur nibh quam. Aenean vel leo dignissim, mollis sapien a, consectetur felis. Etiam malesuada rutrum eleifend. Suspendisse urna justo, hendrerit vitae massa et, varius blandit nunc. Integer lobortis tincidunt est, ac mollis mi finibus nec. Vestibulum varius dapibus mauris, ut convallis quam maximus ut. Cras porttitor feugiat venenatis. Nullam mollis fringilla sapien, sit amet commodo ex ornare in.
+
+    Vivamus pharetra in enim ut porta. Nam id augue id mi molestie volutpat volutpat eu nisl. Proin molestie erat lectus. Pellentesque rutrum neque vitae arcu aliquet, sit amet lobortis risus sodales. Sed venenatis ac lectus vitae consequat. Aliquam eleifend nibh vel nunc pellentesque, sed luctus massa semper. Proin tempus turpis sed tortor egestas finibus. Fusce luctus, urna ut eleifend rhoncus, felis metus consectetur enim, ut lacinia tortor arcu vel orci.
+    
+    Maecenas sed sem a est pharetra vestibulum varius eget dolor. Maecenas dignissim dignissim ipsum, sit amet convallis dui malesuada vel. Nunc fringilla quam ut dui porta, ut consectetur magna tincidunt. Aliquam elementum augue vel sagittis venenatis. Sed quis ullamcorper massa. Aliquam volutpat fringilla urna a dignissim. Nam in porttitor arcu. Integer at nisi gravida eros tempor sollicitudin non eget turpis. Etiam eget purus elit.
+    
+    Vivamus a commodo orci. Suspendisse in volutpat ex. In hac habitasse platea dictumst. Pellentesque et felis posuere, dignissim urna quis, euismod elit. Nunc sapien elit, consectetur consequat consectetur quis, interdum id elit. Phasellus vitae facilisis metus, eu rutrum eros. Aenean vel sollicitudin lectus. Pellentesque a ullamcorper ante. Donec malesuada neque sed nibh varius luctus. Ut pretium in orci quis fermentum. Nunc scelerisque urna venenatis lacus sagittis varius. Fusce maximus hendrerit dui volutpat convallis.
+    
+    Integer in lacus et lacus aliquam mollis eget eu lorem. Fusce viverra dictum blandit. Etiam lobortis in velit eu cursus. Etiam feugiat, orci at condimentum blandit, mi magna vulputate nisl, eget facilisis arcu justo sit amet diam. Donec imperdiet massa eget cursus fermentum. Nullam ullamcorper justo vel libero facilisis luctus. Donec massa urna, varius ut ante quis, imperdiet lacinia purus. Maecenas dui velit, tincidunt id risus at, sodales molestie justo. Fusce placerat fringilla neque, quis euismod ante egestas a. Nullam finibus augue et venenatis faucibus. Maecenas nisl nisl, laoreet at imperdiet et, bibendum sit amet erat.
+    </p>
+<!--footer 1-->
+
+<section class="">
+  <!-- Footer -->
+  <footer class="bg-light text-center text-white bg-dark p-1">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: CTA -->
+      <section class="">
+        <p class="d-flex justify-content-center align-items-center">
+          <span class="me-3">Join Our Discord Server --></span>
+          
+            <!-- Discord -->
+      <a
+      href="https://discord.gg/Rm9GJzfzVr"
+      target="_blank"
+      class="btn btn-primary btn-floating m-1"
+      style="background-color: #7289da;"
+      href="#!"
+      role="button"
+      ><i class="fab fa-discord fa-2"></i
+      ></a>
+          </p>
+      </section>
+      <!-- Section: CTA -->
+    </div>
+  </footer>
+</section>
+
+
+
+
+
+<!-- footer 2-->
+    <footer class="bg-light text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #55acee;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+    
+          <!-- Google -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #dd4b39;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+           
+          <!-- Instagram -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #ac2bac;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+               
+          <!-- Linkedin -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #0082ca;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- Discord -->
+          <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #7289da;"
+          href="#!"
+          role="button"
+          ><i class="fab fa-discord fa-2"></i
+          ></a>
+          
+          <!-- Github -->
+          <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #333333;"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- add console.log(scrollPosition); for debugging-->
-    <script>
+  
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+    
+        <title>Album example for Bootstrap</title>
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/album/">
+    
+        <!-- Bootstrap core CSS -->
+        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom styles for this template -->
+        <link href="album.css" rel="stylesheet">
+      </head>
+    
+      <body>
+    
+        <header>
+          <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                  <h4 class="text-white">About</h4>
+                  <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                  <h4 class="text-white">Contact</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                    <li><a href="#" class="text-white">Like on Facebook</a></li>
+                    <li><a href="#" class="text-white">Email me</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <strong>Album</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
+        </header>
+    
+        <main role="main">
+    
+          <section class="jumbotron text-center">
+            <div class="container">
+              <h1 class="jumbotron-heading">Album example</h1>
+              <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+              <p>
+                <a href="#" class="btn btn-primary my-2">Main call to action</a>
+                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+              </p>
+            </div>
+          </section>
+    
+          <div class="album py-5 bg-light">
+            <div class="container">
+    
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                  </div>
+                </div>
+    
+        </main>
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/vendor/holder.min.js"></script>
         
-        window.addEventListener('scroll', function () {
-        const parallax = document.querySelector('.parallax');
-        let scrollPosition = window.pageYOffset;
-        parallax.style.transform = 'translateY(' + scrollPosition * .5 + 'px)';
-        });
-        
-        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="/path/to/parallax.js"></script>
+      </body>
+    </html>
+    
+
 </body>
 </html>
+
+
