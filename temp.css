@@ -21,3 +21,7 @@ border-radius: 0px;
   .cardtest {
     border: 1px solid rgba(255, 2, 2, 1);
   }
+
+  a:visited{
+    color:none;
+  }
