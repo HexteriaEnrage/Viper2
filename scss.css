@@ -20,7 +20,7 @@
 }
 body 
 {
-    background-image: url('images/viper-green.png');
+    background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('images/viper-green.png');
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
