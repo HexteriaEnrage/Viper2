@@ -1,3 +1,23 @@
+@font-face
+{
+	font-family: 'pattaya';
+	src: url('fonts/Pattaya-Regular.ttf');
+}
+@font-face
+{
+	font-family: 'nunito';
+	src: url('fonts/Nunito-Regular.ttf');
+}
+@font-face
+{
+	font-family: 'valorant';
+	src: url('fonts/Valorant Font.ttf');
+}
+@font-face
+{
+	font-family: 'Overpass';
+	src: url('fonts/Overpass-Regular.ttf');
+}
 body {
     background-color: blanchedalmond;    
 }
