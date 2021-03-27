@@ -1,63 +1,72 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="scss.css">
-    </head>
-    <body>
-        <!--title bar above navbar-->
-        <div class="titlediv">
-            <h1>Viper's Den</h1>
-            <h2>Welcome to my world.</h2>
-        </div>
-        
-        <!--Navigation bar-->
-        <div class="navbar">
-            <a class="left">
-                <img src="images/orb-large.png" width=46px>
-            </a>
-            <a href="#home" class="left lnk">Home</a>
-            <a href="#ascent" class="left lnk">Ascent</a>
-            <a href="#haven" class="left lnk">Haven</a>
-            <a href="#icebox" class="left lnk">Icebox</a>
-            <a href="#split" class="left lnk">Split</a>
-            <button type="submit">Submit</button>
-            <input type="text" placeholder="Search..">
-            
-        </div>
-        <!--first gallery element-->
-        <div class="gallery">
-            <a target="_blank" href="images/placeholder/unknown.png">
-                <img src="images/placeholder/unknown.png" alt="" >
-            </a>
-            <img class="card-symbol card-c" src="images/TX_Viper_C.png">
-            <div class="card-desc">
-                <p>Ascent | somewhere to somewhere else</p>
-                <div>Learn more...</div>
-            </div>
-        </div>
-        <div class="gallery">
-            <a target="_blank" href="images/placeholder/unknown.png">
-                <img src="images/placeholder/unknown.png" alt="" >
-            </a>
-            <img class="card-symbol card-c" src="images/TX_Viper_C.png">
-            <div class="card-desc">
-                <p>Ascent | somewhere to somewhere else</p>
-                <div>Learn more...</div>
-            </div>
-        </div>
-        <div class="gallery">
-            <a target="_blank" href="images/placeholder/unknown.png">
-                <img src="images/placeholder/unknown.png" alt="" >
-            </a>
-            <img class="card-symbol card-c" src="images/TX_Viper_C.png">
-            <div class="card-desc">
-                <p>Ascent | somewhere to somewhere else</p>
-                <div>Learn more...</div>
-            </div>
-        </div>
-        <!--just empty space so scrolling can be tested-->
-        <div style="height: 10000px;">
 
+<head>
+    <link rel="stylesheet" href="scss.css">
+</head>
+
+<body>
+    <script src="cardgen.js"></script>
+
+    <!--title bar above navbar-->
+    <div class="titlediv">
+        <h1>Viper's Den</h1>
+        <h2>Welcome to my world.</h2>
+    </div>
+
+    <!--Navigation bar-->
+    <div class="navbar">
+        <a class="left">
+            <img src="images/orb-large.png" width=46px>
+        </a>
+        <a href="#home" class="left lnk">Home</a>
+        <a href="#ascent" class="left lnk">Ascent</a>
+        <a href="#haven" class="left lnk">Haven</a>
+        <a href="#icebox" class="left lnk">Icebox</a>
+        <a href="#split" class="left lnk">Split</a>
+        <button type="submit">Submit</button>
+        <input type="text" placeholder="Search..">
+
+    </div>
+    <script>
+        genCard();
+    </script>
+    <!--first gallery element-->
+    <!--<div class="gallery">
+            <a target="_blank" href="images/placeholder/unknown.png">
+                <img src="images/placeholder/unknown.png" alt="" >
+            </a>
+            <img class="card-symbol card-c" src="images/TX_Viper_C.png">
+            <div class="card-desc">
+                <p>Ascent | somewhere to somewhere else</p>
+                <div>Learn more...</div>
+            </div>
         </div>
-    </body>
+        <div class="gallery">
+            <a target="_blank" href="images/placeholder/unknown.png">
+                <img src="images/placeholder/unknown.png" alt="" >
+            </a>
+            <img class="card-symbol card-c" src="images/TX_Viper_C.png">
+            <div class="card-desc">
+                <p>Ascent | somewhere to somewhere else</p>
+                <div>Learn more...</div>
+            </div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="images/placeholder/unknown.png">
+                <img src="images/placeholder/unknown.png" alt="" >
+            </a>
+            <img class="card-symbol card-c" src="images/TX_Viper_C.png">
+            <div class="card-desc">
+                <p>Ascent | somewhere to somewhere else</p>
+                <div>Learn more...</div>
+            </div>
+        </div>-->
+
+    <!--just empty space so scrolling can be tested-->
+    <div style="height: 10000px;">
+
+    </div>
+</body>
+
 </html>
