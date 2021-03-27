@@ -32,28 +32,20 @@ var cardJSON = {
         }
     ],
     "filter": [
-        {
-            "img": "images/placeholder/unknown1.png",
-            "desc": "Bind A Molly",
-            "symbol": "C",
-            "tags": ["Snakebite", "A Site", "A Bath"]
-        },
-        {
-            "img": "images/placeholder/unknown1.png",
-            "desc": "Bind A Molly",
-            "symbol": "C",
-            "tags": ["Snakebite", "A Site", "A Bath"]
-        },
-        {
-            "img": "images/placeholder/unknown1.png",
-            "desc": "Bind A Molly",
-            "symbol": "C",
-            "tags": ["Snakebite", "A Site", "A Bath"]
-        }
+
     ]
 }
 function genCard(map) {
+    if(map == 'filter')
+    {
+        document.getElementById('clearfilters').setAttribute('style','visibility: shown');
+    }
+    else
+    {
+        document.getElementById('clearfilters').setAttribute('style','visibility: hidden');
+    }
     var container = document.getElementById("cardContainer");
+    container.innerHTML='';
     var pArray = cardJSON[map];
     for (i = 0; i < pArray.length; i++) {
         var pDiv = document.createElement('div');
