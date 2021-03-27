@@ -192,6 +192,22 @@ body::-webkit-scrollbar {
 {
     width: 90%;
     margin: 0 auto;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
+    justify-content: center;
+}
+.card-desc div.tag
+{
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 2px 5px 2px 5px;
+    border-radius: 15px;
+    background-color: blueviolet;
+    text-align: center;
+    padding: 0;
+}
+.card-desc div.tag p
+{
+    margin: 5px;
 }
