@@ -4,13 +4,13 @@ var cardJSON = {
             "img": "images/placeholder/unknown.png",
             "desc": "Somewhere to somewhere else",
             "symbol": "C",
-            "tags": ["Orb","A Site","A Long","A Long","A Long","A Long","A Long"]
+            "tags": ["Orb","A Site","A Long","A Long","A Long","A Long","A Long","A Site","A Long","A Long","A Long","A Long","A Long","A Site","A Long","A Long","A Long","A Long","A Long"]
         },
         {
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "X",
-            "tags": ["Orb","A Site","A Long","A Long","A Long","A Long","A Long"]
+            "img": "images/placeholder/unknown1.png",
+            "desc": "Bind A Molly",
+            "symbol": "C",
+            "tags": ["Snakebite","A Site","A Bath"]
         },
         {
             "img": "images/placeholder/unknown.png",
@@ -55,7 +55,7 @@ function genCard(map) {
         pDiv.setAttribute('class', 'gallery');
         var iA = document.createElement('a');
         iA.innerHTML = `<img src="${pArray[i].img}" alt="" >`;
-        iA.setAttribute('href', pArray[i].img);
+        //iA.setAttribute('href', 'pArray[i].img');
         pDiv.appendChild(iA);
         var symbolSprite = document.createElement('img');
         symbolSprite.setAttribute('src', `images/TX_Viper_${pArray[i].symbol}.png`);
@@ -76,7 +76,10 @@ function genCard(map) {
                 descDiv.appendChild(tagDiv);
             }
         }
+        var lMore = document.createElement('button');
+        lMore.innerHTML = 'Learn more...';
         pDiv.appendChild(descDiv);
+        pDiv.appendChild(lMore);
         container.appendChild(pDiv);
     }
 }

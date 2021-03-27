@@ -161,19 +161,31 @@ body::-webkit-scrollbar {
     font-family: nunito;
     color: white;
 	font-size: 20px;
-  	padding: 12px;
+  	padding: 0;
 	text-align: center;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+    height: 120px;
 }
-.card-desc div
+.card-desc::-webkit-scrollbar
+{
+    display: none;
+}
+.gallery button
 {
     font-family: nunito;
     background-color: #00ff00;
     border-radius: 5px;
     color: black;
-    padding: 10px;
-    margin-top: 50px;
+    padding-top: 5px;
+    margin-top: 5px;
+    bottom: 50px;
+    border: none;
+    font-size: 20px;
+    width: 80%;
 }
 .gallery:hover {
 	box-shadow: 10px 10px cyan;
@@ -206,8 +218,14 @@ body::-webkit-scrollbar {
     background-color: blueviolet;
     text-align: center;
     padding: 0;
+    color: black;
+    font-family: nunito;
 }
 .card-desc div.tag p
+{
+    margin: 5px;
+}
+.card-desc p
 {
     margin: 5px;
 }
