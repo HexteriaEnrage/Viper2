@@ -12,7 +12,7 @@ border-radius: 0px;
 }
 
 .nav-wrapper {
-    position: fixed;
+    position: sticky;
     right:0;
     left:0;
   }

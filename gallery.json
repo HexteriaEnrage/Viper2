@@ -1,0 +1,12 @@
+{
+    "cards": [
+        {
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else"
+        },
+        {
+            "img": "images/placeholder/unknown.png",
+            "desc": "This is a different card."
+        }
+    ]
+}
