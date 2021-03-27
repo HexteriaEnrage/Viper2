@@ -39,13 +39,14 @@ function genCard(map) {
     if(map == 'filter')
     {
         document.getElementById('clearfilters').setAttribute('style','visibility: shown');
+        container.innerHTML='';
     }
     else
     {
         document.getElementById('clearfilters').setAttribute('style','visibility: hidden');
     }
     var container = document.getElementById("cardContainer");
-    container.innerHTML='';
+    
     var pArray = cardJSON[map];
     for (i = 0; i < pArray.length; i++) {
         var pDiv = document.createElement('div');
@@ -66,6 +67,7 @@ function genCard(map) {
                 var tagDiv = document.createElement('div');
                 tagDiv.setAttribute('class', 'tag');
                 tagDiv.setAttribute('onclick', `filter('${pArray[i].tags[b]}', '${map}')`);
+                tagDiv.setAttribute('href', `#${pArray[i].tags[b]}`);
                 var tagText = document.createElement('p');
                 tagText.textContent = pArray[i].tags[b];
                 tagDiv.appendChild(tagText);
@@ -74,6 +76,17 @@ function genCard(map) {
         }
         pDiv.appendChild(descDiv);
         container.appendChild(pDiv);
+    }
+}
+function genAll()
+{
+    console.log(cardJSON.length);
+    
+    for (i=0;i<Object.keys(cardJSON).length-1;i++)
+    {
+        console.log(cardJSON[i]);
+        genCard(Object.keys(cardJSON)[i]);
+        
     }
 }
 var lastSorted;

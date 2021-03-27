@@ -220,6 +220,7 @@ body::-webkit-scrollbar {
     padding: 0;
     color: black;
     font-family: nunito;
+    cursor: pointer;
 }
 .card-desc div.tag p
 {
