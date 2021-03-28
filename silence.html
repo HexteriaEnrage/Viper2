@@ -10,9 +10,10 @@
 
 <body>
     <script src="cardgen.js"></script>
+    <script src="effects.js"></script>
 
     <!--title bar above navbar-->
-    <div class="titlediv">
+    <div id='titlebar' class="titlediv">
         <h1>Viper's Den</h1>
         <h2>Welcome to my world.</h2>
     </div>
@@ -23,10 +24,11 @@
             <img src="images/orb-large.png" width=46px>
         </a>
         <a href="./silence.html" class="left lnk active">Home</a>
-        <a href="./ascent.html" class="left lnk">Ascent</a>
-        <a href="./haven.html" class="left lnk">Haven</a>
-        <a href="./icebox.html" class="left lnk">Icebox</a>
-        <a href="./split.html" class="left lnk">Split</a>
+        <a href="./ascent.html" class="left lnk" onmouseover="changeHeader('ascent')" onmouseout="resetHeader()">Ascent</a>
+        <a href="./bind.html" class="left lnk" onmouseover="changeHeader('bind')" onmouseout="resetHeader()">Bind</a>
+        <a href="./haven.html" class="left lnk" onmouseover="changeHeader('haven')" onmouseout="resetHeader()">Haven</a>
+        <a href="./icebox.html" class="left lnk" onmouseover="changeHeader('icebox')" onmouseout="resetHeader()">Icebox</a>
+        <a href="./split.html" class="left lnk" onmouseover="changeHeader('split')" onmouseout="resetHeader()">Split</a>
         <button type="submit">Submit</button>
         <input type="text" placeholder="Search..">
         <a href="./about.html" class="right lnk">About</a>
