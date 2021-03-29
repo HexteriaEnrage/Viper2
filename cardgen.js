@@ -229,7 +229,7 @@ function seeMore(media, type, description)
     if(type == 'img')
     {
         moreContainer.innerHTML = `<div class='media'>
-        <img src="${media}">
+        <img id="mediaSrc" src="${media}">
     </div>
     <div class='media2'>
         <p>${description}</p>
