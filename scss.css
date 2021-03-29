@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
     font-size: 17px;
     border-radius: 5px;
 }
-/*submit button*/
+/*submit */
 .navbar button
 {
     border: none;
@@ -216,11 +216,21 @@ body::-webkit-scrollbar {
     height: auto;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    cursor: pointer;
 }
-.gfilter:hover {
-	box-shadow: 10px 10px rgb(54, 54, 54);
-	top: -10px;
-	left: -10px;
+.cInfo
+{
+
+    width: 60%;
+    background-color: #333;
+    z-index: 60;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+
 }
 .card-desc::-webkit-scrollbar
 {
@@ -289,4 +299,37 @@ body::-webkit-scrollbar {
 .card-desc p
 {
     margin: 5px;
+}
+.media
+{
+    width: 100%;
+    height: 70%;
+}
+#mediaSrc
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+.media2
+{
+    width: 100%;
+    height: 25%;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+    overflow: scroll;
+}
+.media2::-webkit-scrollbar
+{
+    display: none;
+}
+.media2 p
+{
+    margin: 15px;
+    font-family: nunito;
+    Color: white;
+}
+#mediaQuit
+{
+    margin: 5px;
+    left: 50%;
 }

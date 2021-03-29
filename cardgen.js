@@ -4,77 +4,87 @@ var cardJSON = {
         { "color": "cyan" },
         {
             "map": "ascent",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "Q",
-            "tags": ["Orb", "ascent", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
-        },
-        {
-            "map": "ascent",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "Q",
-            "tags": ["Orb", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
-        },
-        {
-            "map": "ascent",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
+            "img": "images/cards/testCard1.png",
+            "desc": "A Execute Back of Generator",
+            "media":"images/cards/testcard1.png",
+            "type":"img",
+            "mDesc":"Molly for hitting the back of generator near A heaven",
             "symbol": "C",
-            "tags": ["Snakebite", "ascent", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "tags": ["A Site","A Execute","Execute","Generator","Snakebite"]
         },
         {
             "map": "ascent",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
+            "img": "images/cards/testCard2.png",
+            "desc": "B Retake from A Ramp",
+            "media":"images/cards/testCard2.png",
+            "type":"img",
+            "mDesc":"lands on stairs, you can use a default snakebite to clear triple if you wanna use your 2nd snakebite as well.",
             "symbol": "C",
-            "tags": ["Snakebite", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "tags": ["B Site", "B Retake", "Retake", "Stairs", "Snakebite"]
         },
         {
             "map": "ascent",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "X",
-            "tags": ["Ultimate", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "img": "images/cards/testCard3_img.png",
+            "desc": "One Way Cat (Can't be picked up)",
+            "media":"images/cards/testCard3.mp4",
+            "type":"video",
+            "mDesc":"Orb cant be picked up",
+            "symbol": "Q",
+            "tags": ["Catwalk", "Mid", "Oneway", "Can't Pickup", "Orb"]
+        },
+        {
+            "map": "ascent",
+            "img": "images/cards/testCard3_img.png",
+            "desc": "One Way Cat (Can't be picked up)",
+            "media":"images/cards/testCard3.mp4",
+            "type":"video",
+            "mDesc":"Orb cant be picked up",
+            "symbol": "Q",
+            "tags": ["Catwalk", "Mid", "Oneway", "Can't Pickup", "Orb"]
         }
     ],
     "bind": [
         { "color": "cyan", },
         {
             "map": "bind",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
+            "img": "images/cards/testCard4.png",
+            "desc": "B Site Hall Oneway",
+            "media":"images/cards/testCard4.png",
+            "type":"img",
+            "mDesc":"Oneway for the entrance to B from CT",
             "symbol": "Q",
-            "tags": ["Orb", "bind", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "tags": ["Oneway", "B Site", "Orb"]
         },
         {
             "map": "bind",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "C",
-            "tags": ["Orb", "tester", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "img": "images/cards/testCard4.png",
+            "desc": "B Site Hall Oneway",
+            "media":"images/cards/testCard4.png",
+            "type":"img",
+            "mDesc":"Oneway for the entrance to B from CT",
+            "symbol": "Q",
+            "tags": ["Oneway", "B Site", "Orb"]
         },
         {
             "map": "bind",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "C",
-            "tags": ["Orb", "tester2", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "img": "images/cards/testCard4.png",
+            "desc": "B Site Hall Oneway",
+            "media":"images/cards/testCard4.png",
+            "type":"img",
+            "mDesc":"Oneway for the entrance to B from CT",
+            "symbol": "Q",
+            "tags": ["Oneway", "B Site", "Orb"]
         },
         {
             "map": "bind",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
+            "img": "images/cards/testCard2.png",
+            "desc": "B Retake from A Ramp",
+            "media":"images/cards/testCard2.png",
+            "type":"img",
+            "mDesc":"lands on stairs, you can use a default snakebite to clear triple if you wanna use your 2nd snakebite as well.",
             "symbol": "C",
-            "tags": ["Orb", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+            "tags": ["B Site", "B Retake", "Retake", "Stairs", "Snakebite"]
         },
-        {
-            "map": "bind",
-            "img": "images/placeholder/unknown.png",
-            "desc": "Somewhere to somewhere else",
-            "symbol": "C",
-            "tags": ["Orb", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
-        }
     ],
     "filter": [
 
@@ -100,11 +110,12 @@ function genCard(map) {
 
 
         var iA = document.createElement('a');
-        iA.innerHTML = `<img src="${pArray[i].img}" alt="" >`;
-        //iA.setAttribute('href', 'pArray[i].img');
+        iA.innerHTML = `<img src="${pArray[i].img}" alt="none" onclick='seeMore("${pArray[i].media}", "${pArray[i].type}", "${pArray[i].mDesc}")'>`;
+        //iA.setAttribute('onclick', 'seeMore(pArray[i].media, pArray[i].type, pArray[i].mDesc)');
         pDiv.appendChild(iA);
         var symbolSprite = document.createElement('img');
         symbolSprite.setAttribute('src', `images/TX_Viper_${pArray[i].symbol}.png`);
+        
         symbolSprite.setAttribute('class', 'card-symbol card-c');
         pDiv.appendChild(symbolSprite);
         var descDiv = document.createElement('div');
@@ -190,12 +201,18 @@ function search() {
             
             //console.log(cardJSON[jsonOb[x]]);
             //console.log(y);
+            
             for (z = 0; z < cardJSON[jsonOb[x]][y].tags.length; z++) {
+                if (cardJSON[jsonOb[x]][y].desc.toLowerCase().includes(term)) {
+                    filterArray.push(cardJSON[jsonOb[x]][y]);
+                    //console.log('broken');
+                    break;
+                }
                 //console.log(z);
                 if (cardJSON[jsonOb[x]][y].tags[z].toLowerCase().includes(term)) {
                     filterArray.push(cardJSON[jsonOb[x]][y]);
                     //console.log('broken');
-                    z=cardJSON[jsonOb[x]][y].tags.length+1;
+                    break;
                 }
             }
         }
@@ -203,4 +220,36 @@ function search() {
     cardJSON.filter = filterArray;
     //console.log(filterArray);
     genCard("filter");
+}
+function seeMore(media, type, description)
+{
+    var moreContainer = document.getElementById('cardPop');
+    moreContainer.setAttribute('style', 'visibility: shown');
+    
+    if(type == 'img')
+    {
+        moreContainer.innerHTML = `<div class='media'>
+        <img src="${media}">
+    </div>
+    <div class='media2'>
+        <p>${description}</p>
+    </div>
+    <button id="mediaQuit" onclick="closeMore()">Close</button>`;
+    } else if(type == 'video')
+    {
+        moreContainer.innerHTML = `<div class='media'>
+        
+        <video id="mediaSrc" controls >
+            <source src="${media}">
+        </video>
+    </div>
+    <div class='media2'>
+        <p>${description}</p>
+    </div>
+    <button id="mediaQuit" onclick="closeMore()">Close</button>`;
+    }
+}
+function closeMore()
+{
+    document.getElementById('cardPop').setAttribute('style', 'visibility: hidden');
 }
