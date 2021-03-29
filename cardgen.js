@@ -1,36 +1,79 @@
 
 var cardJSON = {
     "ascent": [
+        { "color": "cyan" },
+        {
+            "map": "ascent",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "Q",
+            "tags": ["Orb", "ascent", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "ascent",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "Q",
+            "tags": ["Orb", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "ascent",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "C",
+            "tags": ["Snakebite", "ascent", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "ascent",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "C",
+            "tags": ["Snakebite", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "ascent",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "X",
+            "tags": ["Ultimate", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        }
+    ],
+    "bind": [
         { "color": "cyan", },
         {
+            "map": "bind",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "Q",
+            "tags": ["Orb", "bind", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "bind",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "C",
+            "tags": ["Orb", "tester", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "bind",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
+            "symbol": "C",
+            "tags": ["Orb", "tester2", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
+        },
+        {
+            "map": "bind",
             "img": "images/placeholder/unknown.png",
             "desc": "Somewhere to somewhere else",
             "symbol": "C",
             "tags": ["Orb", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
         },
         {
-            "img": "images/placeholder/unknown1.png",
-            "desc": "Bind A Molly",
+            "map": "bind",
+            "img": "images/placeholder/unknown.png",
+            "desc": "Somewhere to somewhere else",
             "symbol": "C",
-            "tags": ["Snakebite", "A Site", "A Bath"]
-        },
-        {
-            "img": "images/placeholder/unknown2.png",
-            "desc": "A Short Retake Oneway",
-            "symbol": "Q",
-            "tags": ["Orb", "Oneway", "Retake", "A Site", "A Short"]
-        },
-        {
-            "img": "images/placeholder/unknown1.png",
-            "desc": "Bind A Molly",
-            "symbol": "C",
-            "tags": ["Orb", "B Site", "A Bath"]
-        },
-        {
-            "img": "images/placeholder/unknown1.png",
-            "desc": "Bind A Molly",
-            "symbol": "C",
-            "tags": ["Snakebite", "B Site", "A Bath"]
+            "tags": ["Orb", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long", "A Site", "A Long", "A Long", "A Long", "A Long", "A Long"]
         }
     ],
     "filter": [
@@ -40,20 +83,22 @@ var cardJSON = {
 var firstTimeRun = false;
 function genCard(map) {
     var container = document.getElementById("cardContainer");
-    if (map == 'filter' || firstTimeRun) {
+    if (map == 'filter') {
         document.getElementById('clearfilters').setAttribute('style', 'visibility: shown');
     }
     else {
         document.getElementById('clearfilters').setAttribute('style', 'visibility: hidden');
         document.getElementById('sbox').value = '';
-        firstTimeRun = true;
+        if (!firstTimeRun)
+            container.innerHTML = '';
     }
-    container.innerHTML = '';
+
 
     var pArray = cardJSON[map];
     for (i = 1; i < pArray.length; i++) {
         var pDiv = document.createElement('div');
-        pDiv.setAttribute('class', 'gallery');
+
+
         var iA = document.createElement('a');
         iA.innerHTML = `<img src="${pArray[i].img}" alt="" >`;
         //iA.setAttribute('href', 'pArray[i].img');
@@ -65,11 +110,12 @@ function genCard(map) {
         var descDiv = document.createElement('div');
         descDiv.setAttribute('class', 'card-desc');
         descDiv.innerHTML = `<p>${pArray[i].desc}</p>`
+
         if (pArray[i].tags != null) {
             for (b = 0; b < pArray[i].tags.length; b++) {
                 var tagDiv = document.createElement('div');
                 tagDiv.setAttribute('class', 'tag');
-                tagDiv.setAttribute('onclick', `filter('${pArray[i].tags[b]}', '${map}')`);
+                tagDiv.setAttribute('onclick', `filter('${pArray[i].tags[b]}', '${pArray[i].map}')`);
                 tagDiv.setAttribute('href', `#${pArray[i].tags[b]}`);
                 var tagText = document.createElement('p');
                 tagText.textContent = pArray[i].tags[b];
@@ -78,18 +124,24 @@ function genCard(map) {
             }
         }
         pDiv.appendChild(descDiv);
+        pDiv.setAttribute('class', `gallery g${pArray[i].map}`);
         container.appendChild(pDiv);
     }
 }
 function genAll() {
-    firstTimeRun = false;
-    for (i = 0; i < Object.keys(cardJSON).length - 1; i++) {
-        genCard(Object.keys(cardJSON)[i]);
-
+    var container = document.getElementById("cardContainer").innerHTML = '';
+    firstTimeRun = true;
+    for (o = 0; o < Object.keys(cardJSON).length - 1; o++) {
+        genCard(Object.keys(cardJSON)[o]);
+        //console.log(o);
+        //console.log(Object.keys(cardJSON));
     }
+    firstTimeRun = false;
 }
-var lastSorted;
+var lastSorted = 'five';
+
 function filter(filterTag, map) {
+    //console.log(map);
     if (map == 'filter') {
         map = lastSorted;
     } else {
@@ -99,10 +151,10 @@ function filter(filterTag, map) {
     pDiv.innerHTML = '';
 
     var filterArray = [];
+
     filterArray[0] = cardJSON[map][0];
     for (u = 1; u < cardJSON[map].length; u++) {
 
-        console.log(cardJSON[map][u].tags + '\n' + '================');
         for (z = 0; z < cardJSON[map][u].tags.length; z++) {
 
             if (filterTag == cardJSON[map][u].tags[z]) {
@@ -112,7 +164,7 @@ function filter(filterTag, map) {
         }
     }
     cardJSON.filter = filterArray;
-    console.log(cardJSON.filter);
+    //console.log(cardJSON.filter);
     genCard("filter");
 }
 function sBoxPress(event) {
@@ -123,7 +175,7 @@ function sBoxPress(event) {
 function search() {
     var term = document.getElementById('sbox').value;
     term = term.toLowerCase();
-    console.log(term);
+    //console.log(term);
     if (term == '') {
         genAll();
         return;
@@ -133,22 +185,22 @@ function search() {
     var filterArray = [];
     filterArray[0] = { "color": "blue" };
     var jsonOb = Object.keys(cardJSON);
-    for(x=0; x< jsonOb.length-1;x++)
-    {
-        for(y=1; y< jsonOb[x].length; y++)
-        {
-            console.log(cardJSON[jsonOb[x]][y]);
-            console.log(cardJSON[jsonOb[x]][y].tags);
-            for(z=0;z<cardJSON[jsonOb[x]][y].tags.length; z++)
-            {
-                if(term == cardJSON[jsonOb[x]][y].tags[z].toLowerCase())
-                {
+    for (x = 0; x < jsonOb.length - 1; x++) {
+        for (y = 1; y < cardJSON[jsonOb[x]].length; y++) {
+            
+            //console.log(cardJSON[jsonOb[x]]);
+            //console.log(y);
+            for (z = 0; z < cardJSON[jsonOb[x]][y].tags.length; z++) {
+                //console.log(z);
+                if (cardJSON[jsonOb[x]][y].tags[z].toLowerCase().includes(term)) {
                     filterArray.push(cardJSON[jsonOb[x]][y]);
-                    break;
+                    //console.log('broken');
+                    z=cardJSON[jsonOb[x]][y].tags.length+1;
                 }
             }
         }
     }
     cardJSON.filter = filterArray;
+    //console.log(filterArray);
     genCard("filter");
 }

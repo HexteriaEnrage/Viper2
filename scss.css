@@ -181,25 +181,46 @@ body::-webkit-scrollbar {
     background-color: #333;
     
 }
+.gascent:hover
+{
+    box-shadow: 10px 10px rgb(108, 25, 156);
+	top: -10px;
+	left: -10px;
+}
+.gbind:hover
+{
+    box-shadow: 10px 10px rgb(112, 184, 140);
+	top: -10px;
+	left: -10px;
+}
+.ghaven:hover
+{
+    box-shadow: 10px 10px rgb(151, 151, 151);
+	top: -10px;
+	left: -10px;
+}
+.gicebox:hover
+{
+    box-shadow: 10px 10px cyan;
+	top: -10px;
+	left: -10px;
+}
+.gsplit:hover
+{
+    box-shadow: 10px 10px rgb(179, 206, 206);
+	top: -10px;
+	left: -10px;
+}
 .gallery a img {
     width: 100%;
     height: auto;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    
 }
-.card-desc {
-    font-family: nunito;
-    color: white;
-	font-size: 20px;
-  	padding: 0;
-	text-align: center;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
-    overflow: scroll;
-    -ms-overflow-style: none;
-	scrollbar-width: none;
-    height: 120px;
+.gfilter:hover {
+	box-shadow: 10px 10px rgb(54, 54, 54);
+	top: -10px;
+	left: -10px;
 }
 .card-desc::-webkit-scrollbar
 {
@@ -218,10 +239,18 @@ body::-webkit-scrollbar {
     font-size: 20px;
     width: 80%;
 }
-.gallery:hover {
-	box-shadow: 10px 10px cyan;
-	top: -10px;
-	left: -10px;
+.card-desc {
+    font-family: nunito;
+    color: white;
+	font-size: 20px;
+  	padding: 0;
+	text-align: center;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+    height: 160px;
 }
 .card-symbol
 {
