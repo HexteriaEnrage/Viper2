@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
     font-size: 17px;
     border-radius: 5px;
 }
-/*submit button*/
+/*submit */
 .navbar button
 {
     border: none;
@@ -120,10 +120,41 @@ body::-webkit-scrollbar {
     background-size: cover;
     text-align: center;
     color: white;
-    background-image: url('images/Edited\ header.png');
+    background-image: url('images/Edited-header.png');
     background-attachment: fixed;
     overflow: hidden;
     padding: 100px;
+}
+.titlediv div.ctr
+{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 346px;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+.titlediv img
+{
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    
+}
+.titlediv img.in
+{
+    opacity: 1;
 }
 .titlediv h1
 {
@@ -150,35 +181,86 @@ body::-webkit-scrollbar {
     background-color: #333;
     
 }
+.gascent:hover
+{
+    box-shadow: 10px 10px rgb(108, 25, 156);
+	top: -10px;
+	left: -10px;
+}
+.gbind:hover
+{
+    box-shadow: 10px 10px rgb(112, 184, 140);
+	top: -10px;
+	left: -10px;
+}
+.ghaven:hover
+{
+    box-shadow: 10px 10px rgb(151, 151, 151);
+	top: -10px;
+	left: -10px;
+}
+.gicebox:hover
+{
+    box-shadow: 10px 10px cyan;
+	top: -10px;
+	left: -10px;
+}
+.gsplit:hover
+{
+    box-shadow: 10px 10px rgb(179, 206, 206);
+	top: -10px;
+	left: -10px;
+}
 .gallery a img {
     width: 100%;
     height: auto;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    
+    cursor: pointer;
 }
-.card-desc {
-    font-family: nunito;
-    color: white;
-	font-size: 20px;
-  	padding: 12px;
-	text-align: center;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
+.cInfo
+{
+
+    width: 60%;
+    background-color: #333;
+    z-index: 60;
+    position: fixed;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+
 }
-.card-desc div
+.card-desc::-webkit-scrollbar
+{
+    display: none;
+}
+.gallery button
 {
     font-family: nunito;
     background-color: #00ff00;
     border-radius: 5px;
     color: black;
-    padding: 10px;
-    margin-top: 50px;
+    padding-top: 5px;
+    margin-top: 5px;
+    bottom: 50px;
+    border: none;
+    font-size: 20px;
+    width: 80%;
 }
-.gallery:hover {
-	box-shadow: 10px 10px cyan;
-	top: -10px;
-	left: -10px;
+.card-desc {
+    font-family: nunito;
+    color: white;
+	font-size: 20px;
+  	padding: 0;
+	text-align: center;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+    height: 160px;
 }
 .card-symbol
 {
@@ -206,8 +288,48 @@ body::-webkit-scrollbar {
     background-color: blueviolet;
     text-align: center;
     padding: 0;
+    color: black;
+    font-family: nunito;
+    cursor: pointer;
 }
 .card-desc div.tag p
 {
     margin: 5px;
+}
+.card-desc p
+{
+    margin: 5px;
+}
+.media
+{
+    width: 100%;
+    height: 70%;
+}
+#mediaSrc
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+.media2
+{
+    width: 100%;
+    height: 25%;
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+    overflow: scroll;
+}
+.media2::-webkit-scrollbar
+{
+    display: none;
+}
+.media2 p
+{
+    margin: 15px;
+    font-family: nunito;
+    Color: white;
+}
+#mediaQuit
+{
+    margin: 5px;
+    left: 50%;
 }
