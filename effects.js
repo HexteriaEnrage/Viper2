@@ -1,8 +1,14 @@
 function changeHeader(img)
 {
-    document.getElementById('titlebar').style.backgroundImage =`url(images/${img}_map.png)`;
+    var titleimg = document.getElementById('titlebar');
+    titleimg.setAttribute('class', '');
+    titleimg.setAttribute('src', `images/${img}_map.png`);
+    
+    titleimg.setAttribute('class', 'in');
 }
 function resetHeader()
 {
-    document.getElementById('titlebar').style.backgroundImage = 'url(images/Edited-header.png)';
+    var titleimg = document.getElementById('titlebar');
+    titleimg.setAttribute('class', '');
+    
 }

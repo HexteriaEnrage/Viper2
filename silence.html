@@ -13,7 +13,10 @@
     <script src="effects.js"></script>
 
     <!--title bar above navbar-->
-    <div id='titlebar' class="titlediv">
+    <div class="titlediv">
+        <div class='ctr'>
+        <img id='titlebar'>
+    </div>
         <h1>Viper's Den</h1>
         <h2>Welcome to my world.</h2>
     </div>
@@ -23,17 +26,17 @@
         <a class="left">
             <img src="images/orb-large.png" width=46px>
         </a>
-        <a href="./silence.html" class="left lnk active">Home</a>
-        <a href="./ascent.html" class="left lnk" onmouseover="changeHeader('ascent')" onmouseout="resetHeader()">Ascent</a>
-        <a href="./bind.html" class="left lnk" onmouseover="changeHeader('bind')" onmouseout="resetHeader()">Bind</a>
-        <a href="./haven.html" class="left lnk" onmouseover="changeHeader('haven')" onmouseout="resetHeader()">Haven</a>
-        <a href="./icebox.html" class="left lnk" onmouseover="changeHeader('icebox')" onmouseout="resetHeader()">Icebox</a>
-        <a href="./split.html" class="left lnk" onmouseover="changeHeader('split')" onmouseout="resetHeader()">Split</a>
-        <button type="submit">Submit</button>
-        <input type="text" placeholder="Search..">
-        <a href="./about.html" class="right lnk">About</a>
-        <a href="./faq.html" class="right lnk">FAQ</a>
-        <a href="#clearfilters" id="clearfilters" class="right lnk" onclick="genAll()">Clear Filters</a>
+        <a href="" class="left lnk">Home</a>
+        <a href="#ascent" class="left lnk" onmouseover="changeHeader('ascent')" onmouseout="resetHeader()" onclick="genCard('ascent')">Ascent</a>
+        <a href="#bind" class="left lnk" onmouseover="changeHeader('bind')" onmouseout="resetHeader()" onclick="genCard('bind')">Bind</a>
+        <a href="#haven" class="left lnk" onmouseover="changeHeader('haven')" onmouseout="resetHeader()" onclick="genCard('haven')">Haven</a>
+        <a href="#icebox" class="left lnk" onmouseover="changeHeader('icebox')" onmouseout="resetHeader()" onclick="genCard('icebox')">Icebox</a>
+        <a class="left lnk" onmouseover="changeHeader('split')" onmouseout="resetHeader()" onclick="genCard('split')">Split</a>
+        <button id="sButton" type="submit" onclick="search()">Submit</button>
+        <input type="text" id="sbox" placeholder="Search.." onkeypress="sBoxPress(event)">
+        <a href="#about" class="right lnk">About</a>
+        <a href="#faq" class="right lnk">FAQ</a>
+        <a href="#top" id="clearfilters" class="right lnk" onclick="genAll()">Clear Filters</a>
 
     </div>
     <div id="cardContainer" class="cardCenter">
