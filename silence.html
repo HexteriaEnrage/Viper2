@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="scss.css">
+    <link rel="stylesheet" href="about.css">
     <title>Viper's Den</title>
 </head>
 
 <body onload="closeMore()">
     <script src="cardgen.js"></script>
     <script src="effects.js"></script>
+    <script src="about.js"></script>
 
     <!--title bar above navbar-->
     <div class="titlediv">
@@ -32,9 +34,9 @@
         <a href="#haven" class="left lnk" onmouseover="changeHeader('haven')" onmouseout="resetHeader()" onclick="genCard('haven')">Haven</a>
         <a href="#icebox" class="left lnk" onmouseover="changeHeader('icebox')" onmouseout="resetHeader()" onclick="genCard('icebox')">Icebox</a>
         <a class="left lnk" onmouseover="changeHeader('split')" onmouseout="resetHeader()" onclick="genCard('split')">Split</a>
-        <button id="sButton" type="submit" onclick="search()">Submit</button>
+        <button id="sButton" type="submit" onclick="search()"></button>
         <input type="text" id="sbox" placeholder="Search.." onkeypress="sBoxPress(event)">
-        <a href="#about" class="right lnk">About</a>
+        <a href="#about" class="right lnk" onclick="about()">About</a>
         <a href="#faq" class="right lnk">FAQ</a>
         <a href="#top" id="clearfilters" class="right lnk" onclick="genAll()">Clear Filters</a>
 

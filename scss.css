@@ -19,101 +19,6 @@
 	font-family: 'Overpass';
 	src: url('fonts/Overpass-Regular.ttf');
 }
-/*page background*/
-body 
-{
-    /*Sets background with a alpha gradient to make it darker*/
-    background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('images/viper-green.png');
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    position: relative;
-    /*remove scrollbar*/
-    -ms-overflow-style: none;
-	scrollbar-width: none;
-}
-/*remove scrollbar on other browsers*/
-body::-webkit-scrollbar {
-    display: none;
-  }
-/*main navigation bar*/
-.navbar
-{
-    overflow: hidden;
-    background-color: black;
-    position: sticky;
-    height: 46px;
-    box-shadow: 60px;
-    top: 0;
-    /*make sure this shows over pretty much any other elements*/
-    z-index: 50;
-}
-.navbar a
-{
-    text-decoration: none;
-    text-align: center;
-	padding: 14px 16px;
-    color: white;
-    font-family: valorant;
-}
-/*format for active page*/
-.navbar a.active
-{
-    background-color: #00ff00;
-    color: black;
-}
-/*change color on hover*/
-.navbar a.lnk:hover
-{
-    background-color: #00ff00;
-    color: black;
-}
-.navbar a img
-{
-    top: -14px;
-    overflow: visible;
-    position: relative;
-}
-/*float left. Makes it easy to set this so that we can put links on either side of the navbar without having a whole new 'a' class*/
-.navbar a.left
-{
-    float: left;
-}
-/*same as above but to the right*/
-.navbar a.right
-{
-    float: right;
-}
-/*search box formatting*/
-.navbar input
-{
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-    border-radius: 5px;
-}
-/*submit */
-.navbar button
-{
-    border: none;
-    text-decoration: none;
-    text-align: center;
-	padding: 14px 16px;
-    font-size: 16px;
-    background-color: #222;
-    color: white;
-    font-family: valorant;
-    float: right;
-}
-/*change bg on hover*/
-.navbar button:hover
-{
-    background-color: #333;
-}
 /*formatting for top banner*/
 .titlediv
 {
@@ -168,6 +73,108 @@ body::-webkit-scrollbar {
     font-family: pattaya;
     font-size: 36px;
 }
+/*main navigation bar*/
+.navbar
+{
+    overflow: hidden;
+    background-color: black;
+    position: sticky;
+    height: 46px;
+    box-shadow: 60px;
+    top: 0;
+    /*make sure this shows over pretty much any other elements*/
+    z-index: 50;
+}
+.navbar a
+{
+    text-decoration: none;
+    text-align: center;
+	padding: 14px 16px;
+    color: white;
+    font-family: valorant;
+}
+/*format for active page*/
+.navbar a.active
+{
+    background-color: #00ff00;
+    color: black;
+}
+/*change color on hover*/
+.navbar a.lnk:hover
+{
+    background-color: #00ff00;
+    color: black;
+}
+.navbar a img
+{
+    top: -14px;
+    overflow: visible;
+    position: relative;
+}
+/*float left. Makes it easy to set this so that we can put links on either side of the navbar without having a whole new 'a' class*/
+.navbar a.left
+{
+    float: left;
+}
+/*same as above but to the right*/
+.navbar a.right
+{
+    float: right;
+}
+/*page background*/
+body 
+{
+    /*Sets background with a alpha gradient to make it darker*/
+    background-image: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url('images/viper-green.png');
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    /*remove scrollbar*/
+    -ms-overflow-style: none;
+	scrollbar-width: none;
+}
+/*remove scrollbar on other browsers*/
+body::-webkit-scrollbar {
+    display: none;
+  }
+/*search box formatting*/
+.navbar input
+{
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border-radius: 20px;
+}
+/*submit */
+.navbar button
+{
+    border: none;
+    position: relative;
+    right: 45px;
+    top: 15px;
+    text-decoration: none;
+    text-align: center;
+	
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    background-color: #222;
+    color: white;
+    border-radius: 20px;
+    font-family: valorant;
+    float: right;
+}
+/*change bg on hover*/
+.navbar button:hover
+{
+    background-color: #333;
+}
+
 .gallery
 {
     font-size: 0;
