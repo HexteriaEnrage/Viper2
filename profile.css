@@ -1,0 +1,35 @@
+.container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.container {
+    width: 64%;
+    max-width: 64%;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background: #ffff;
+    margin-bottom:  100px;
+}
+
+.content > *:first-child {
+    margin-top: 0;
+}
+
+.content > *:last-child {
+    margin-bottom: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.content {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    text-align: center;
+}
