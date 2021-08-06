@@ -1,0 +1,98 @@
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
+.header {
+	font-family: 'Overpass', sans-serif;
+}
+.sub-header {
+	font-family: 'Pattaya', sans-serif;
+}
+
+.item {
+	border-radius: 8px;
+	border-color: #20752b;
+	border-width: 5px;
+	border-style: solid;
+	text-align: center;
+	image-align: center;
+	background-color: #32a852;
+	max-width: 500px;
+}
+
+img {
+	border-color: #000;
+	border-width: 2.5;
+	border-style: solid;
+	text-align: center;
+	border-radius: 4px;
+}
+
+#difficulty-tag {
+	border-radius: 8px;
+}
+
+.easy {
+	background-color: green;
+	color: #fff;
+}
+
+.medium {
+	background-color: orange;
+	color: #fff;
+}
+
+.hard {
+	background-color: red;
+	color: #fff;
+}
+
+.extreme {
+	background-color: black;
+	color: #fff;
+}
+
+#map-tag {
+	border-radius: 8px;
+}
+
+.haven {
+	background-color: indianred;
+	color: #fff;
+}
+
+.icebox {
+	background-color: skyblue;
+	color: #fff;
+}
+
+.bind {
+	background-color: lightgoldenrodyellow;
+	color: #000;
+}
+
+.split {
+	background-color: dimgrey;
+	color: #fff;
+}
+
+.breeze {
+	background-color: green;
+	color: #fff;
+}
+
+.ascent {
+	background-color: orange;
+	color: #fff;
+}
+
+.title {
+	color: #fff;
+	text-decoration: bold;
+}
+
+.dropdown {
+	width: 100%;
+	font-size: 18px;
+	border-radius: 8px;
+}

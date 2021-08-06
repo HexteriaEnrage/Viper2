@@ -16,6 +16,17 @@ session_start();
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="profile.css">
 	<title><?php echo $user_data['user_name']; ?> - Viper's Den</title>
+    <link rel="stylesheet" type="text/css" href="autoupdate-styles.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Overpass-->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
+    <!--Pattaya-->
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <!--Nunito-->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
 </head>
 <body onload="closeMore()">
     <script src="cardgen.js"></script>
@@ -53,12 +64,100 @@ session_start();
 
     <div class="spacer">
 	    <div class="container">
-	        <h1 class="title">Lorem ipsum dolor sit amet</h1>
+	        <h1 class="header">Viper's Den</h1>
+            <h2 class="sub-header">Welcome to my world.</h2>
 	        <div class="content">   
-	            <h2 class="text">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus, lacus in mattis sagittis, enim lorem finibus nulla, nec pretium ipsum ex et mi. Vivamus ut urna lorem. Maecenas dolor quam, gravida a fermentum at, ullamcorper at urna. Integer rhoncus ante eget ligula suscipit cursus. Quisque nibh tellus, efficitur vel felis et, malesuada porta nulla. In ultricies diam enim, in varius leo facilisis eget. Quisque non nulla metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis faucibus tortor sit amet erat porttitor, sit amet suscipit lectus consequat. Phasellus auctor urna ac quam feugiat finibus. Donec eu rhoncus turpis.
-				<br>
-				Suspendisse sagittis urna vitae tristique posuere. Nam dui nulla, mattis efficitur varius in, venenatis vitae nulla. Fusce et quam vel enim tempor luctus. Proin nisi ex, finibus eget iaculis id, cursus at ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean non nibh vulputate, tincidunt neque ultricies, ultricies nibh. Vestibulum commodo dolor eu leo scelerisque dapibus. Donec sed ex nec risus condimentum mollis eget ut augue. Vestibulum bibendum tortor erat, ac lacinia lectus sodales sit amet. Ut id suscipit nunc. Donec sed malesuada massa, id tempus turpis. Aenean vulputate ligula et tortor sagittis pulvinar. Duis tristique semper turpis eget posuere. Aliquam sit amet lacinia libero. Proin varius, tellus eget fringilla facilisis, nibh ligula lobortis ante, nec condimentum lacus purus sed quam.</h2>
+	            
+            <?php
+
+                include("connection2.php");
+
+                $query = "SELECT * FROM snakebites";
+                $result = mysqli_query($con2, $query);
+                $rows = mysqli_num_rows($result);
+
+                for ($i = 1; $i <= $rows; $i++) 
+                {
+                    echo fetch_snakebite_lineup($i, $con2);
+                }
+
+                $query = "SELECT * FROM toxinscreens";
+                $result = mysqli_query($con2, $query);
+                $rows = mysqli_num_rows($result);
+
+                for ($i = 1; $i <= $rows; $i++) 
+                {
+                    echo fetch_toxinscreen_lineup($i, $con2);
+                }
+
+                $query = "SELECT * FROM `poisonorbs`";
+                $result = mysqli_query($con2, $query);
+                $rows = mysqli_num_rows($result);
+
+                for ($i = 1; $i <= $rows; $i++) 
+                {
+                    echo fetch_poisonorb_lineup($i, $con2);
+                }
+
+
+/*
+            include("connection2.php");
+
+                $query = "SELECT * FROM snakebites";
+                $result = mysqli_query($con2, $query);
+                $rows = mysqli_num_rows($result);
+
+                for ($i = 1; $i <= $rows; $i++) 
+                {
+                    $query = "SELECT * FROM snakebites WHERE id = '$i' LIMIT 1";
+                    $result = mysqli_query($con2, $query);
+                    if(isset($result))
+                    {
+                        echo fetch_snakebite_lineup($i, $con2);
+                    } else {
+                        $rows++;
+                    }
+                }
+
+                $query = "SELECT * FROM toxinscreens";
+                $result = mysqli_query($con2, $query);
+                $rows = mysqli_num_rows($result);
+
+                for ($i = 1; $i <= $rows; $i++) 
+                {
+                    $query = "SELECT * FROM toxinscreens WHERE id = '$i' LIMIT 1";
+                    $result = mysqli_query($con2, $query);
+                    if(isset($result))
+                    {
+                        echo fetch_toxinscreen_lineup($i, $con2);
+                    } else {
+                        $rows++;
+                    }
+                }
+
+                $query = "SELECT * FROM poisonorbs";
+                $result = mysqli_query($con2, $query);
+                $rows = mysqli_num_rows($result);
+
+                for ($i = 1; $i <= $rows; $i++) 
+                {
+                    $query = "SELECT * FROM poisonorbs WHERE id = '$i' LIMIT 1";
+                    $result = mysqli_query($con2, $query);
+                    if(isset($result))
+                    {
+                        echo fetch_poisonorb_lineup($i, $con2);
+                    } else {
+                        $rows++;
+                    }
+                }*/
+
+
+            ?>
+
+    <br><br>
+    <a href="newlineup.php">Submit a lineup</a>
+    <a href="verifylineup.php">Verify a lineup</a>
+
 	        </div>
 	    </div>
     </div>
