@@ -1,3 +1,16 @@
+<?php 
+session_start();
+        
+    include("connection.php");
+    include("functions.php");
+    $user_data = check_login($con);
+
+?>
+
+<!--The code above is completly optional
+    Removing it will break some of the navbar
+    This can be easily fixed-->
+
 <!DOCTYPE html>
 <html>
 
@@ -34,12 +47,12 @@
         <a href="#haven" class="left lnk" onmouseover="changeHeader('haven')" onmouseout="resetHeader()" onclick="genCard('haven')">Haven</a>
         <a href="#icebox" class="left lnk" onmouseover="changeHeader('icebox')" onmouseout="resetHeader()" onclick="genCard('icebox')">Icebox</a>
         <a class="left lnk" onmouseover="changeHeader('split')" onmouseout="resetHeader()" onclick="genCard('split')">Split</a>
+        <a href="profile.php" class="right lnk"><?php echo $user_data['user_name']; ?></a>
         <button id="sButton" type="submit" onclick="search()"></button>
         <input type="text" id="sbox" placeholder="Search.." onkeypress="sBoxPress(event)">
         <a href="#about" class="right lnk" onclick="about()">About</a>
         <a href="#faq" class="right lnk">FAQ</a>
         <a href="#top" id="clearfilters" class="right lnk" onclick="genAll()">Clear Filters</a>
-
     </div>
     <div id="cardContainer" class="cardCenter">
         <script>
