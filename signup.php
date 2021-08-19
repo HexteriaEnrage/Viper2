@@ -9,13 +9,18 @@ session_start();
 	{
 		// something was posted
 		$user_name = $_POST['user_name'];
+		$email = $_POST['email'];
+		$name = $_POST['name'];
 		$password = $_POST['password'];
+		$password = encrypt_str($password);
+		$confirm_password = $_POST['confirm_password'];
+		$confirm_password = encrypt_str($confirm_password);
 
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name) && $password == $confirm_password)
 		{
 			//save to database
 			$user_id = random_num(20);
-			$query = "INSERT INTO users (user_id, user_name, password) VALUES ('$user_id', '$user_name', '$password')";
+			$query = "INSERT INTO users (user_id, user_name, email, full_name, password) VALUES ('$user_id', '$user_name', '$email', '$name' '$password')";
 
 			mysqli_query($con, $query);
 
@@ -23,7 +28,9 @@ session_start();
 			die();
 		} else
 		{
-			echo "Please enter a username or password. Remember that your username can not be numeric.";
+			echo '<script type="text/javascript">',
+     			 'document.getElementById("invalid-info").styles = "display: block;"',
+           '</script>';
 		}
 	}
 ?>
@@ -31,52 +38,41 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Viper's Den - Signup</title>
-	<style type="text/css">
-	#text{
-
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-		width: 100%;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="login-styles.css">
 </head>
 <body>
-
-	<div id="box">
-		
-		<form method="post">
-			<div style="font-size: 20px; margin: 10px; color: white;">Signup</div>
-
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
-
-			<input id="button" type="submit" value="Signup"><br><br>
-
-			<a href="login.php">Click to Login</a><br><br>
-		</form>
-
+	<div id="invalid-info" class="alert" style="display:none;">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+		Some of the details you entered are invalid. Please double check them and try again.
 	</div>
 
+	<form class="box" method="post">
+		<h1>SIGNUP</h1>
+		<input id="text" type="text" name="name" placeholder="Full Name" required>
+		<input id="text" type="email" name="email" placeholder="Email Address" required>
+		<input id="text" type="text" name="user_name" placeholder="Username" required>
+		<input id="text" type="password" name="password" placeholder="Pasword" required>
+		<input id="text" type="password" name="confirm_password" placeholder="Confirm Pasword" required>
+		<input type="submit" value="Signup"><hr>
+		<a class="button" id="signup-button" href="login.php">Login</a>
+	</form>
+
+	<script>
+	var close = document.getElementsByClassName("closebtn");
+	var i;
+
+	for (i = 0; i < close.length; i++) {
+	close[i].onclick = function(){
+
+		var div = this.parentElement;
+
+		div.style.opacity = "0";
+
+		setTimeout(function(){ div.style.display = "none"; }, 600);
+	}
+	}
+	</script>
 </body>
 </html>

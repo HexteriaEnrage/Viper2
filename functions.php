@@ -242,3 +242,9 @@ function check_admin_login($con)
 	header("Location: silence.php");
 	die();
 }
+
+function encrypt_str($data)
+{
+	$data = hash("sha256", $data);
+	return $data;
+}

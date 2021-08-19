@@ -10,32 +10,34 @@ session_start();
 		// something was posted
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
+		$password = encrypt_str($password);
 
-		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		if(!empty($user_name) && !empty($password))
 		{
 			// read from database
 			$query = "SELECT * FROM users WHERE user_name = '$user_name' LIMIT 1";
 
 			$result = mysqli_query($con, $query);
 
-			if($result)
+			if($result && mysqli_num_rows($result) > 0)
 			{
-				if($result && mysqli_num_rows($result) > 0)
+				$user_data = mysqli_fetch_assoc($result);
+
+				if($user_data['password'] == $password)
 				{
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password)
-					{
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: silence.php");
-						die();
-					}
+					$_SESSION['user_id'] = $user_data['user_id'];
+					header("Location: silence.php");
+					die();
 				}
 			}
-			echo "Invalid username or password. Please check your spelling and try again.";
+			echo '<script type="text/javascript">',
+     			 'document.getElementById("invalid-info").styles = "display: block;"',
+           '</script>';
 		} else
 		{
-			echo "Invalid username or password. Please check your spelling and try again.";
+			echo '<script type="text/javascript">',
+					 'document.getElementById("invalid-info").styles = "display: block;"',
+					 '</script>';
 		}
 	}
 
@@ -44,52 +46,39 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Viper's Den - Login</title>
-	<style type="text/css">
-	#text{
-
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-		width: 100%;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-	</style>
+	<link rel="stylesheet" type="text/css" href="login-styles.css">
 </head>
 <body>
+		<div id="invalid-info" class="alert" style="display:none;">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+			Invalid username or password. Please check your spelling and try again.
+		</div>
 
-	<div id="box">
-		
-		<form method="post">
-			<div style="font-size: 20px; margin: 10px; color: white;">Login</div>
-
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
-
-			<input id="button" type="submit" value="Login"><br><br>
-
-			<a href="signup.php">Click to Signup</a><br><br>
+		<form class="box" method="post">
+			<h1>Login</h1>
+			<input id="text" type="text" name="user_name" placeholder="Username">
+			<input id="text" type="password" name="password" placeholder="Pasword">
+			<input type="submit" value="Login"><hr>
+			<a class="button" id="signup-button" href="signup.php">Signup</a>
 		</form>
 
-	</div>
+<script>
+	var close = document.getElementsByClassName("closebtn");
+	var i;
+
+	for (i = 0; i < close.length; i++) {
+	  close[i].onclick = function(){
+
+	    var div = this.parentElement;
+
+	    div.style.opacity = "0";
+
+	    setTimeout(function(){ div.style.display = "none"; }, 600);
+	  }
+}
+</script>
 
 </body>
 </html>

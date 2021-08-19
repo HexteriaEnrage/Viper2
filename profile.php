@@ -2,6 +2,7 @@
 session_start();
         
     include("connection.php");
+    include("connection2.php");
     include("functions.php");
     $user_data = check_login($con);
 
@@ -69,9 +70,6 @@ session_start();
 	        <div class="content">   
 	            
             <?php
-
-                include("connection2.php");
-
                 $query = "SELECT * FROM snakebites";
                 $result = mysqli_query($con2, $query);
                 $rows = mysqli_num_rows($result);
